@@ -66,7 +66,7 @@ class Intro extends StatelessWidget {
                 children: <Widget>[
                   ElevatedButton(
                     onPressed: () {
-                      pageController.animateToPage(1,
+                      pageController.animateToPage(2,
                           duration: const Duration(milliseconds: 250),
                           curve: Curves.easeIn);
                     },
