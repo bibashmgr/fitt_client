@@ -17,7 +17,7 @@ class CustomTextField extends StatelessWidget {
           labelName,
           style: const TextStyle(
             fontFamily: 'Outfit',
-            fontSize: 20.0,
+            fontSize: 18.0,
             fontWeight: FontWeight.w600,
           ),
         ),
