@@ -14,7 +14,8 @@ class Info extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-        minimum: const EdgeInsets.all(25.0),
+      minimum: const EdgeInsets.all(25.0),
+      child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
@@ -121,6 +122,8 @@ class Info extends StatelessWidget {
               ],
             )
           ],
-        ));
+        ),
+      ),
+    );
   }
 }
