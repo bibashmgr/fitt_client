@@ -8,10 +8,16 @@ import 'package:fitt_client/screens/starting_screen/components/loading.dart';
 import 'package:fitt_client/screens/starting_screen/components/intro.dart';
 import 'package:fitt_client/screens/starting_screen/components/info.dart';
 import 'package:fitt_client/screens/starting_screen/components/level.dart';
+import 'package:fitt_client/screens/starting_screen/components/goal.dart';
 
-class Starting extends StatelessWidget {
+class Starting extends StatefulWidget {
   const Starting({Key? key}) : super(key: key);
 
+  @override
+  State<Starting> createState() => _StartingState();
+}
+
+class _StartingState extends State<Starting> {
   @override
   Widget build(BuildContext context) {
     final PageController pageController = PageController(
@@ -45,6 +51,9 @@ class Starting extends StatelessWidget {
                 pageController: pageController,
               ),
               Level(
+                pageController: pageController,
+              ),
+              Goal(
                 pageController: pageController,
               ),
             ],
