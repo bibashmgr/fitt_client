@@ -63,11 +63,7 @@ class Goal extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
                   ElevatedButton(
-                    onPressed: () {
-                      pageController.animateToPage(5,
-                          duration: const Duration(milliseconds: 250),
-                          curve: Curves.easeIn);
-                    },
+                    onPressed: () {},
                     style: ElevatedButton.styleFrom(
                       elevation: 0.0,
                       primary: kPrimaryColor,

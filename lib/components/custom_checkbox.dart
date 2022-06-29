@@ -28,7 +28,7 @@ class _CustomCheckboxState extends State<CustomCheckbox> {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
         Text(
-          "$widget.labelName",
+          "${widget.labelName} ",
           style: const TextStyle(
             fontFamily: 'Outfit',
             fontSize: 20.0,
