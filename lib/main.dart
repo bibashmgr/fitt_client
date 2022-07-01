@@ -1,4 +1,6 @@
+import 'package:fitt_client/constants/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 // screens
 import 'package:fitt_client/screens/starting_screen/starting.dart';
@@ -14,6 +16,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+      statusBarColor: kPrimaryColor,
+    ));
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Fitt',
