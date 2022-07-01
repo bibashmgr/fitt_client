@@ -6,6 +6,9 @@ import 'package:fitt_client/constants/colors.dart';
 // componets
 import 'package:fitt_client/components/custom_checkbox.dart';
 
+// screens
+import 'package:fitt_client/screens/finish_screen/finish.dart';
+
 class Goal extends StatelessWidget {
   const Goal({Key? key, required this.pageController}) : super(key: key);
 
@@ -63,7 +66,12 @@ class Goal extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const Finish()),
+                      );
+                    },
                     style: ElevatedButton.styleFrom(
                       elevation: 0.0,
                       primary: kPrimaryColor,
