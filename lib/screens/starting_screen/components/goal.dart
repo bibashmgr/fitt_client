@@ -9,11 +9,16 @@ import 'package:fitt_client/components/custom_checkbox.dart';
 // screens
 import 'package:fitt_client/screens/finish_screen/finish.dart';
 
-class Goal extends StatelessWidget {
-  const Goal({Key? key, required this.pageController}) : super(key: key);
-
+class Goal extends StatefulWidget {
   final PageController pageController;
 
+  const Goal({Key? key, required this.pageController}) : super(key: key);
+
+  @override
+  State<Goal> createState() => _GoalState();
+}
+
+class _GoalState extends State<Goal> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -36,7 +41,7 @@ class Goal extends StatelessWidget {
                   tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                 ),
                 onPressed: () {
-                  pageController.animateToPage(
+                  widget.pageController.animateToPage(
                     3,
                     duration: const Duration(milliseconds: 250),
                     curve: Curves.easeIn,
@@ -86,7 +91,7 @@ class Goal extends StatelessWidget {
                       'Finish',
                       style: TextStyle(
                         fontFamily: 'Outfit',
-                        fontSize: 20.0,
+                        fontSize: 16.0,
                         fontWeight: FontWeight.bold,
                         letterSpacing: 1.5,
                       ),

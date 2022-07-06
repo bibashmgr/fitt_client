@@ -47,10 +47,10 @@ class Finish extends StatelessWidget {
                   height: 250.0,
                 ),
                 const Text(
-                  'Bibash Thapa Magar, your workout plan is ready',
+                  'Bibash Thapa Magar, your workout plan is ready.',
                   style: TextStyle(
                     fontFamily: 'Outfit',
-                    fontSize: 20.0,
+                    fontSize: 18.0,
                     fontWeight: FontWeight.bold,
                     color: kDarkColor,
                   ),
@@ -82,7 +82,7 @@ class Finish extends StatelessWidget {
                         "Get My Plan",
                         style: TextStyle(
                           fontFamily: 'Outfit',
-                          fontSize: 20.0,
+                          fontSize: 16.0,
                           fontWeight: FontWeight.bold,
                           letterSpacing: 1.5,
                         ),

@@ -6,11 +6,15 @@ import 'package:fitt_client/constants/colors.dart';
 // componets
 import 'package:fitt_client/components/custom_checkbox.dart';
 
-class Level extends StatelessWidget {
+class Level extends StatefulWidget {
+  final PageController pageController;
   const Level({Key? key, required this.pageController}) : super(key: key);
 
-  final PageController pageController;
+  @override
+  State<Level> createState() => _LevelState();
+}
 
+class _LevelState extends State<Level> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -33,7 +37,7 @@ class Level extends StatelessWidget {
                   tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                 ),
                 onPressed: () {
-                  pageController.animateToPage(
+                  widget.pageController.animateToPage(
                     2,
                     duration: const Duration(milliseconds: 250),
                     curve: Curves.easeIn,
@@ -65,7 +69,7 @@ class Level extends StatelessWidget {
                 children: <Widget>[
                   ElevatedButton(
                     onPressed: () {
-                      pageController.animateToPage(4,
+                      widget.pageController.animateToPage(4,
                           duration: const Duration(milliseconds: 250),
                           curve: Curves.easeIn);
                     },
@@ -83,7 +87,7 @@ class Level extends StatelessWidget {
                       'Next',
                       style: TextStyle(
                         fontFamily: 'Outfit',
-                        fontSize: 20.0,
+                        fontSize: 16.0,
                         fontWeight: FontWeight.bold,
                         letterSpacing: 1.5,
                       ),

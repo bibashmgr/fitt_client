@@ -51,7 +51,7 @@ class Intro extends StatelessWidget {
                     'Here are some questions to prepare a personalized plan for you.',
                     style: TextStyle(
                       fontFamily: 'Outfit',
-                      fontSize: 20.0,
+                      fontSize: 18.0,
                       fontWeight: FontWeight.bold,
                       color: kDarkColor,
                     ),
@@ -84,7 +84,7 @@ class Intro extends StatelessWidget {
                       "I'm Ready",
                       style: TextStyle(
                         fontFamily: 'Outfit',
-                        fontSize: 20.0,
+                        fontSize: 16.0,
                         fontWeight: FontWeight.bold,
                         letterSpacing: 1.5,
                       ),

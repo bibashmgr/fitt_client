@@ -3,28 +3,33 @@ import 'package:flutter/material.dart';
 // constants
 import 'package:fitt_client/constants/colors.dart';
 
-class CustomTextField extends StatelessWidget {
+class CustomTextField extends StatefulWidget {
   final String labelName;
 
   const CustomTextField({Key? key, required this.labelName}) : super(key: key);
 
+  @override
+  State<CustomTextField> createState() => _CustomTextFieldState();
+}
+
+class _CustomTextFieldState extends State<CustomTextField> {
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Text(
-          labelName,
+          '${widget.labelName} ',
           style: const TextStyle(
             fontFamily: 'Outfit',
-            fontSize: 18.0,
+            fontSize: 16.0,
             fontWeight: FontWeight.w600,
           ),
         ),
         const SizedBox(
           height: 10,
         ),
-        TextField(
+        TextFormField(
           cursorColor: kDarkColor,
           decoration: InputDecoration(
             border: OutlineInputBorder(

@@ -31,7 +31,7 @@ class _CustomCheckboxState extends State<CustomCheckbox> {
           "${widget.labelName} ",
           style: const TextStyle(
             fontFamily: 'Outfit',
-            fontSize: 20.0,
+            fontSize: 18.0,
             fontWeight: FontWeight.w600,
           ),
         ),
@@ -67,7 +67,7 @@ class _CustomCheckboxState extends State<CustomCheckbox> {
                     "${widget.values[0]}",
                     style: const TextStyle(
                       fontFamily: 'Outfit',
-                      fontSize: 18.0,
+                      fontSize: 16.0,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
@@ -112,7 +112,7 @@ class _CustomCheckboxState extends State<CustomCheckbox> {
                     "${widget.values[1]}",
                     style: const TextStyle(
                       fontFamily: 'Outfit',
-                      fontSize: 18.0,
+                      fontSize: 16.0,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
@@ -157,7 +157,7 @@ class _CustomCheckboxState extends State<CustomCheckbox> {
                     "${widget.values[2]}",
                     style: const TextStyle(
                       fontFamily: 'Outfit',
-                      fontSize: 18.0,
+                      fontSize: 16.0,
                       fontWeight: FontWeight.w600,
                     ),
                   ),

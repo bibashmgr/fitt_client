@@ -26,7 +26,7 @@ class Loading extends StatelessWidget {
                 style: TextStyle(
                   color: kPrimaryColor,
                   fontFamily: 'Outfit',
-                  fontSize: 20.0,
+                  fontSize: 18.0,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -53,7 +53,7 @@ class Loading extends StatelessWidget {
                   'Get Started',
                   style: TextStyle(
                     fontFamily: 'Outfit',
-                    fontSize: 20.0,
+                    fontSize: 16.0,
                     fontWeight: FontWeight.bold,
                     letterSpacing: 1.5,
                   ),
