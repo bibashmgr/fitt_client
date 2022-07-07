@@ -28,7 +28,7 @@ class _CustomCheckboxState extends State<CustomCheckbox> {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
         Text(
-          "${widget.labelName} ",
+          widget.labelName,
           style: const TextStyle(
             fontFamily: 'Outfit',
             fontSize: 18.0,
@@ -64,7 +64,7 @@ class _CustomCheckboxState extends State<CustomCheckbox> {
                   activeColor: kPrimaryColor,
                   checkColor: kLightColor,
                   title: Text(
-                    "${widget.values[0]}",
+                    widget.values[0],
                     style: const TextStyle(
                       fontFamily: 'Outfit',
                       fontSize: 16.0,
@@ -109,7 +109,7 @@ class _CustomCheckboxState extends State<CustomCheckbox> {
                   activeColor: kPrimaryColor,
                   checkColor: kLightColor,
                   title: Text(
-                    "${widget.values[1]}",
+                    widget.values[1],
                     style: const TextStyle(
                       fontFamily: 'Outfit',
                       fontSize: 16.0,
@@ -154,7 +154,7 @@ class _CustomCheckboxState extends State<CustomCheckbox> {
                   activeColor: kPrimaryColor,
                   checkColor: kLightColor,
                   title: Text(
-                    "${widget.values[2]}",
+                    widget.values[2],
                     style: const TextStyle(
                       fontFamily: 'Outfit',
                       fontSize: 16.0,
