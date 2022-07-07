@@ -61,66 +61,100 @@ class _InfoState extends State<Info> {
                   key: formKey,
                   child: Column(
                     children: <Widget>[
-                      const CustomTextField(labelName: 'Full Name'),
+                      const CustomTextField(
+                        labelName: 'Full Name',
+                        inputType: TextInputType.text,
+                      ),
                       const SizedBox(
-                        height: 20,
+                        height: 10,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
                           const SizedBox(
                             width: 150,
-                            child: CustomTextField(labelName: 'Age'),
-                          ),
-                          SizedBox(
-                            width: 150,
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                const Text(
-                                  'Gender',
-                                  style: TextStyle(
-                                    fontFamily: 'Outfit',
-                                    fontSize: 16.0,
-                                    fontWeight: FontWeight.w600,
-                                  ),
-                                ),
-                                DropdownButton(
-                                  value: dropdownValue,
-                                  elevation: 1,
-                                  borderRadius: BorderRadius.circular(10.0),
-                                  onChanged: (String? newValue) {
-                                    setState(() {
-                                      dropdownValue = newValue!;
-                                    });
-                                  },
-                                  items: <String>['Male', 'Female']
-                                      .map<DropdownMenuItem<String>>(
-                                          (String value) {
-                                    return DropdownMenuItem<String>(
-                                      value: value,
-                                      child: Text(value),
-                                    );
-                                  }).toList(),
-                                )
-                              ],
+                            child: CustomTextField(
+                              labelName: 'Age',
+                              inputType: TextInputType.number,
                             ),
                           ),
+                          SizedBox(
+                              width: 150,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  const Text(
+                                    "Gender",
+                                    style: TextStyle(
+                                      fontFamily: 'Outfit',
+                                      fontSize: 16.0,
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  SizedBox(
+                                    height: 80,
+                                    child: InputDecorator(
+                                      decoration: InputDecoration(
+                                        contentPadding:
+                                            const EdgeInsets.symmetric(
+                                          horizontal: 20.0,
+                                          vertical: 18.0,
+                                        ),
+                                        border: OutlineInputBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(5.0),
+                                        ),
+                                      ),
+                                      child: DropdownButtonFormField(
+                                        value: dropdownValue,
+                                        decoration:
+                                            const InputDecoration.collapsed(
+                                          hintText: '',
+                                        ),
+                                        onChanged: (String? newValue) {
+                                          setState(() {
+                                            dropdownValue = newValue!;
+                                          });
+                                        },
+                                        items: <String>[
+                                          'Male',
+                                          'Female',
+                                        ].map<DropdownMenuItem<String>>(
+                                            (String value) {
+                                          return DropdownMenuItem<String>(
+                                            value: value,
+                                            child: Text(value),
+                                          );
+                                        }).toList(),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              )),
                         ],
                       ),
                       const SizedBox(
-                        height: 20,
+                        height: 10,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: const <Widget>[
                           SizedBox(
                             width: 150,
-                            child: CustomTextField(labelName: 'Weight'),
+                            child: CustomTextField(
+                              labelName: 'Weight',
+                              inputType: TextInputType.number,
+                            ),
                           ),
                           SizedBox(
                             width: 150,
-                            child: CustomTextField(labelName: 'Height'),
+                            child: CustomTextField(
+                              labelName: 'Height',
+                              inputType: TextInputType.number,
+                            ),
                           ),
                         ],
                       ),
@@ -132,9 +166,11 @@ class _InfoState extends State<Info> {
                         children: <Widget>[
                           ElevatedButton(
                             onPressed: () {
-                              widget.pageController.animateToPage(3,
-                                  duration: const Duration(milliseconds: 250),
-                                  curve: Curves.easeIn);
+                              if (formKey.currentState!.validate()) {
+                                widget.pageController.animateToPage(3,
+                                    duration: const Duration(milliseconds: 250),
+                                    curve: Curves.easeIn);
+                              }
                             },
                             style: ElevatedButton.styleFrom(
                               elevation: 0.0,

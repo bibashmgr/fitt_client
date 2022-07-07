@@ -5,8 +5,11 @@ import 'package:fitt_client/constants/colors.dart';
 
 class CustomTextField extends StatefulWidget {
   final String labelName;
+  final TextInputType inputType;
 
-  const CustomTextField({Key? key, required this.labelName}) : super(key: key);
+  const CustomTextField(
+      {Key? key, required this.labelName, required this.inputType})
+      : super(key: key);
 
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();
@@ -19,7 +22,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Text(
-          '${widget.labelName} ',
+          widget.labelName,
           style: const TextStyle(
             fontFamily: 'Outfit',
             fontSize: 16.0,
@@ -31,16 +34,21 @@ class _CustomTextFieldState extends State<CustomTextField> {
         ),
         TextFormField(
           cursorColor: kDarkColor,
+          keyboardType: widget.inputType,
           decoration: InputDecoration(
+            helperText: '',
             border: OutlineInputBorder(
-              borderSide: const BorderSide(color: kDarkColor, width: 1.0),
-              borderRadius: BorderRadius.circular(50.0),
+              borderSide: const BorderSide(color: kDarkColor, width: 2.0),
+              borderRadius: BorderRadius.circular(10.0),
             ),
             focusedBorder: OutlineInputBorder(
-              borderSide: const BorderSide(color: kDarkColor, width: 1.0),
-              borderRadius: BorderRadius.circular(50.0),
+              borderSide: const BorderSide(color: kDarkColor, width: 1.5),
+              borderRadius: BorderRadius.circular(10.0),
             ),
           ),
+          validator: (value) {
+            return (value!.isEmpty) ? 'Required' : null;
+          },
         ),
       ],
     );
